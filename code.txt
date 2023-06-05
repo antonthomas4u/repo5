@@ -1,0 +1,120 @@
+ajcemca@S43 MINGW64 /d/anton (main)
+$ git config --global user.name "anton"
+
+ajcemca@S43 MINGW64 /d/anton (main)
+$ git config --global user.email "antonthomas2025@mca.ajce.in"
+
+ajcemca@S43 MINGW64 /d/anton (main)
+$ git init
+Reinitialized existing Git repository in D:/anton/.git/
+
+ajcemca@S43 MINGW64 /d/anton (main)
+$ git add test.txt
+
+ajcemca@S43 MINGW64 /d/anton (main)
+$ git commit -m "first commit"
+On branch main
+nothing to commit, working tree clean
+
+ajcemca@S43 MINGW64 /d/anton (main)
+$ git remote add origin https://github.com/antonthomas4u/repo2.git
+error: remote origin already exists.
+
+ajcemca@S43 MINGW64 /d/anton (main)
+$ git remote add origin1 https://github.com/antonthomas4u/repo2.git
+
+ajcemca@S43 MINGW64 /d/anton (main)
+$ git push origin1 main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 217 bytes | 217.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/antonthomas4u/repo2.git
+ * [new branch]      main -> main
+
+ajcemca@S43 MINGW64 /d/anton (main)
+$ git pull origin1 main
+From https://github.com/antonthomas4u/repo2
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+ajcemca@S43 MINGW64 /d/anton (main)
+$ git pull origin1 main
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 636 bytes | 8.00 KiB/s, done.
+From https://github.com/antonthomas4u/repo2
+ * branch            main       -> FETCH_HEAD
+   06921c1..a502d73  main       -> origin1/main
+Updating 06921c1..a502d73
+Fast-forward
+ test.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ajcemca@S43 MINGW64 /d/anton (main)
+$ git branch b1
+
+ajcemca@S43 MINGW64 /d/anton (main)
+$ git checkout b1
+Switched to branch 'b1'
+
+ajcemca@S43 MINGW64 /d/anton (b1)
+$ ^C
+
+ajcemca@S43 MINGW64 /d/anton (b1)
+$ git add test2.txt
+
+ajcemca@S43 MINGW64 /d/anton (b1)
+$ git commit -m "second commit"
+[b1 a992417] second commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test2.txt
+
+ajcemca@S43 MINGW64 /d/anton (b1)
+$ git remote add origin https://github.com/antonthomas4u/repo2.git
+error: remote origin already exists.
+
+ajcemca@S43 MINGW64 /d/anton (b1)
+$ git remote add origin2 https://github.com/antonthomas4u/repo2.git
+
+ajcemca@S43 MINGW64 /d/anton (b1)
+$ git push origin2 main
+Everything up-to-date
+
+ajcemca@S43 MINGW64 /d/anton (b1)
+$ git push origin2 b1
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 265 bytes | 265.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'b1' on GitHub by visiting:
+remote:      https://github.com/antonthomas4u/repo2/pull/new/b1
+remote:
+To https://github.com/antonthomas4u/repo2.git
+ * [new branch]      b1 -> b1
+
+ajcemca@S43 MINGW64 /d/anton (b1)
+$ git checkout main
+Switched to branch 'main'
+M       test.txt
+
+ajcemca@S43 MINGW64 /d/anton (main)
+$ git merge b1
+Updating a502d73..a992417
+Fast-forward
+ test2.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test2.txt
+
+ajcemca@S43 MINGW64 /d/anton (main)
+$ git push origin2 main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/antonthomas4u/repo2.git
+   a502d73..a992417  main -> main
+
+ajcemca@S43 MINGW64 /d/anton (main)
+$
